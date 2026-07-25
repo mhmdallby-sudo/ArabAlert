@@ -8,6 +8,7 @@ import FontManager from './pages/FontManager';
 import DonationAnimation from './pages/DonationAnimation';
 import Preview from './pages/Preview';
 import Clock from './components/Clock';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('dashboard');
@@ -71,6 +72,7 @@ function App() {
           {renderPage()}
         </div>
       </div>
+      <Analytics />
     </div>
   );
 }
