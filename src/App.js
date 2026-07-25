@@ -7,6 +7,7 @@ import ColorManager from './pages/ColorManager';
 import FontManager from './pages/FontManager';
 import DonationAnimation from './pages/DonationAnimation';
 import Preview from './pages/Preview';
+import Clock from './components/Clock';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('dashboard');
@@ -55,6 +56,8 @@ function App() {
         return <DonationAnimation donation={donation} setDonation={setDonation} />;
       case 'preview':
         return <Preview alertSettings={alertSettings} colors={colors} fonts={fonts} />;
+      case 'clock':
+        return <Clock />;
       default:
         return <Dashboard />;
     }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Sidebar.css';
-import { FiBell, FiSettings, FiPalette, FiType, FiGift, FiEye, FiMenu, FiX } from 'react-icons/fi';
+import { FiBell, FiSettings, FiPalette, FiType, FiGift, FiEye, FiMenu, FiX, FiClock } from 'react-icons/fi';
 
 const Sidebar = ({ currentPage, setCurrentPage }) => {
   const [isOpen, setIsOpen] = useState(true);
@@ -11,7 +11,8 @@ const Sidebar = ({ currentPage, setCurrentPage }) => {
     { id: 'colors', label: 'إدارة الألوان', icon: FiPalette },
     { id: 'fonts', label: 'إدارة الخطوط', icon: FiType },
     { id: 'donation', label: 'رسوم التبرعات', icon: FiGift },
-    { id: 'preview', label: 'معاينة', icon: FiEye }
+    { id: 'preview', label: 'معاينة', icon: FiEye },
+    { id: 'clock', label: 'الساعة العالمية', icon: FiClock }
   ];
 
   return (
@@ -45,7 +46,7 @@ const Sidebar = ({ currentPage, setCurrentPage }) => {
           })}
         </nav>
         <div className="sidebar-footer">
-          <div className="version">v1.0.0</div>
+          <div className="version">v1.1.0</div>
         </div>
       </aside>
     </>
