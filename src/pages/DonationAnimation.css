@@ -1,0 +1,218 @@
+.donation-animation {
+  text-align: right;
+  direction: rtl;
+}
+
+.donation-animation h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #ff006e, #8338ec);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 30px;
+}
+
+.animation-settings {
+  background: rgba(255, 0, 110, 0.05);
+  border: 1px solid rgba(255, 0, 110, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.setting-group {
+  margin-bottom: 20px;
+}
+
+.setting-group:last-child {
+  margin-bottom: 0;
+}
+
+.setting-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.animation-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.animation-btn {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 0, 110, 0.2);
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.animation-btn:hover {
+  background: rgba(255, 0, 110, 0.1);
+  border-color: #ff006e;
+}
+
+.animation-btn.active {
+  background: linear-gradient(135deg, #ff006e, #8338ec);
+  border-color: #ff006e;
+  box-shadow: 0 0 20px rgba(255, 0, 110, 0.4);
+}
+
+.speed-select,
+.sound-select {
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 0, 110, 0.2);
+  border-radius: 6px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.speed-select:focus,
+.sound-select:focus {
+  outline: none;
+  border-color: #ff006e;
+}
+
+.particle-slider {
+  width: 100%;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.particle-value {
+  display: block;
+  font-size: 12px;
+  color: #ff006e;
+  font-weight: bold;
+  text-align: center;
+}
+
+.animation-preview {
+  background: rgba(255, 0, 110, 0.05);
+  border: 1px solid rgba(255, 0, 110, 0.2);
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.animation-preview h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.preview-container {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border: 2px solid #ff006e;
+  border-radius: 8px;
+  padding: 40px;
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.animation-demo {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.particles {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.particle {
+  position: absolute;
+  font-size: 24px;
+  bottom: -30px;
+  animation: rise 2s ease-out forwards;
+}
+
+.animation-coins .particle {
+  animation-duration: 2s;
+}
+
+.animation-hearts .particle {
+  animation: rise 2s ease-out, scale 2s ease-out;
+  animation-duration: 2s;
+}
+
+.animation-stars .particle {
+  animation: rise 2s ease-out, spin 2s linear;
+  animation-duration: 2s;
+}
+
+.animation-confetti .particle {
+  animation: rise 2s ease-out, rotate 2s linear;
+  animation-duration: 2s;
+}
+
+.animation-fireworks .particle {
+  animation: burst 2s ease-out;
+  animation-duration: 2s;
+}
+
+.animation-rain .particle {
+  animation: fall 2s linear;
+  animation-duration: 2s;
+}
+
+@keyframes rise {
+  to {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes burst {
+  to {
+    transform: translate(var(--tx), var(--ty));
+    opacity: 0;
+  }
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(300px);
+  }
+}
+
+.preview-info {
+  text-align: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .animation-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

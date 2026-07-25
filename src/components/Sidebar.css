@@ -1,0 +1,134 @@
+.sidebar {
+  width: 280px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-right: 2px solid #ff006e;
+  height: 100vh;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, width 0.3s ease;
+  position: relative;
+  z-index: 100;
+}
+
+.sidebar.closed {
+  transform: translateX(-100%);
+  position: absolute;
+}
+
+.sidebar-header {
+  margin-bottom: 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+}
+
+.logo-icon {
+  font-size: 28px;
+  animation: pulse 2s infinite;
+}
+
+.logo-text {
+  background: linear-gradient(135deg, #ff006e, #8338ec);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sidebar-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 15px;
+  background: rgba(255, 0, 110, 0.1);
+  border: 1px solid rgba(255, 0, 110, 0.2);
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  text-align: right;
+  direction: rtl;
+}
+
+.nav-item:hover {
+  background: rgba(255, 0, 110, 0.2);
+  border-color: #ff006e;
+  transform: translateX(-5px);
+}
+
+.nav-item.active {
+  background: linear-gradient(135deg, rgba(255, 0, 110, 0.3), rgba(131, 56, 236, 0.3));
+  border-color: #ff006e;
+  box-shadow: 0 0 20px rgba(255, 0, 110, 0.3);
+}
+
+.nav-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.nav-label {
+  flex: 1;
+}
+
+.sidebar-footer {
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 0, 110, 0.2);
+  text-align: center;
+}
+
+.version {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  background: #ff006e;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    height: 100vh;
+    z-index: 99;
+  }
+
+  .sidebar.closed {
+    transform: translateX(-100%);
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}

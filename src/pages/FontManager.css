@@ -1,0 +1,127 @@
+.font-manager {
+  text-align: right;
+  direction: rtl;
+}
+
+.font-manager h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #ff006e, #8338ec);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 30px;
+}
+
+.fonts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.font-group {
+  background: rgba(255, 0, 110, 0.05);
+  border: 1px solid rgba(255, 0, 110, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.font-group h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.font-select {
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 0, 110, 0.2);
+  border-radius: 6px;
+  color: white;
+  font-size: 14px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.font-select:focus {
+  outline: none;
+  border-color: #ff006e;
+  box-shadow: 0 0 10px rgba(255, 0, 110, 0.2);
+}
+
+.font-size-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.font-size-control label {
+  font-size: 12px;
+  min-width: 40px;
+}
+
+.font-slider {
+  flex: 1;
+  cursor: pointer;
+}
+
+.size-value {
+  min-width: 40px;
+  text-align: center;
+  font-size: 12px;
+  color: #ff006e;
+  font-weight: bold;
+}
+
+.font-preview {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border: 1px solid rgba(255, 0, 110, 0.3);
+  border-radius: 6px;
+  padding: 15px;
+  text-align: center;
+  color: #ff006e;
+  word-break: break-word;
+}
+
+.font-combined-preview {
+  background: rgba(255, 0, 110, 0.05);
+  border: 1px solid rgba(255, 0, 110, 0.2);
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.font-combined-preview h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.combined-alert {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border: 2px solid #ff006e;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+}
+
+.combined-alert h2 {
+  color: #ff006e;
+  margin-bottom: 15px;
+}
+
+.combined-alert p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .fonts-grid {
+    grid-template-columns: 1fr;
+  }
+}
